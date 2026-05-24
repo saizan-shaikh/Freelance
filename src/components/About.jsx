@@ -27,7 +27,7 @@ export default function About() {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
               <div className="relative glass p-8 rounded-2xl">
                 <h3 className="text-3xl font-bold text-white mb-2">Saizan Shaikh</h3>
-                <p className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold mb-6 text-lg">Frontend & Backend Developer | BCA Student (IGNOU)</p>
+                <p className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold mb-6 text-lg">Freelance Web Developer & Frontend Engineer | IGNOU Student</p>
                 <p className="text-slate-300 leading-relaxed text-lg">
                   I'm a passionate developer who loves building real-world projects. I have hands-on experience creating food delivery apps, e-commerce websites, and rental platforms.
                 </p>
@@ -47,23 +47,23 @@ export default function About() {
           >
             <div className="glass p-6 rounded-xl hover:border-primary transition-all duration-300 hover:-translate-y-2 group">
               <Layout className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-              <h4 className="text-white font-bold mb-2 text-xl">Frontend</h4>
+              <h3 className="text-white font-bold mb-2 text-xl">Frontend Development</h3>
               <p className="text-sm text-slate-400">React.js, Tailwind CSS, Next.js, Framer Motion</p>
             </div>
             <div className="glass p-6 rounded-xl hover:border-secondary transition-all duration-300 hover:-translate-y-2 group">
               <Database className="w-10 h-10 text-secondary mb-4 group-hover:scale-110 transition-transform" />
-              <h4 className="text-white font-bold mb-2 text-xl">Backend</h4>
+              <h3 className="text-white font-bold mb-2 text-xl">Backend Integration</h3>
               <p className="text-sm text-slate-400">Node.js, Express, MongoDB, REST APIs</p>
             </div>
             <div className="glass p-6 rounded-xl hover:border-secondary transition-all duration-300 hover:-translate-y-2 group">
               <Code2 className="w-10 h-10 text-secondary mb-4 group-hover:scale-110 transition-transform" />
-              <h4 className="text-white font-bold mb-2 text-xl">Clean Code</h4>
+              <h3 className="text-white font-bold mb-2 text-xl">Clean Code Standards</h3>
               <p className="text-sm text-slate-400">Reusable components, Architecture & Best practices</p>
             </div>
             <div className="glass p-6 rounded-xl hover:border-primary transition-all duration-300 hover:-translate-y-2 group">
               <Smartphone className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-              <h4 className="text-white font-bold mb-2 text-xl">Responsive</h4>
-              <p className="text-sm text-slate-400">Perfect pixel-perfect designs on all mobile & desktop</p>
+              <h3 className="text-white font-bold mb-2 text-xl">Responsive Website Design</h3>
+              <p className="text-sm text-slate-400">Pixel-perfect responsive designs for all mobile & desktop displays</p>
             </div>
           </motion.div>
         </div>

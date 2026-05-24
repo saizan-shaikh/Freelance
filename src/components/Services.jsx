@@ -4,23 +4,23 @@ import { PenTool, Globe, Briefcase, Code } from 'lucide-react';
 const services = [
   {
     icon: <PenTool className="w-8 h-8 text-white" />,
-    title: "Canva Portfolio Design",
-    description: "Editable templates for Instagram & personal branding with high-quality exports."
+    title: "UI & Template Design",
+    description: "Bespoke card design, custom template design, and responsive landing page mockups crafted for professional personal branding."
   },
   {
     icon: <Globe className="w-8 h-8 text-white" />,
-    title: "Simple Website",
-    description: "1-page responsive portfolio to showcase your work and attract more clients."
+    title: "Portfolio Website Creation",
+    description: "Highly aesthetic, responsive website design to showcase your work, featuring smooth animations and high-converting CTA structure."
   },
   {
     icon: <Briefcase className="w-8 h-8 text-white" />,
-    title: "Business Website",
-    description: "Multi-page modern site tailored for businesses, including fast performance and SEO."
+    title: "Business Website Development",
+    description: "Speed-optimized business websites tailored with technical SEO foundations, semantic HTML structures, and responsive grid layouts."
   },
   {
     icon: <Code className="w-8 h-8 text-white" />,
-    title: "Custom Development",
-    description: "Full-stack frontend + backend MERN solutions for complex requirements."
+    title: "Custom Frontend Development",
+    description: "Custom web development solutions with React, Tailwind CSS, and modern APIs to construct responsive digital products."
   }
 ];
 

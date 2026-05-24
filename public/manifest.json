@@ -1,0 +1,15 @@
+{
+  "short_name": "Saizan Freelancer",
+  "name": "Saizan Freelancer | Web Developer & UI Designer",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "background_color": "#020617",
+  "theme_color": "#06b6d4",
+  "display": "standalone"
+}

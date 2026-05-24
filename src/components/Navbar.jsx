@@ -1,7 +1,7 @@
 import { Link } from 'react-scroll';
 import { Menu, X } from 'lucide-react';
 import { SiNetlify } from "react-icons/si";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -48,7 +48,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             className="flex-shrink-0 relative z-50"
           >
-            <Link to="home" smooth={true} duration={500} className="cursor-pointer">
+            <Link to="home" href="#home" smooth={true} duration={500} className="cursor-pointer" aria-label="Saizan Freelancer Home">
               <span className="text-2xl font-black text-white tracking-wider flex items-center">
                 SAIZAN
                 <span className="text-primary ml-1 text-3xl leading-none">.</span>
@@ -67,9 +67,11 @@ export default function Navbar() {
                 >
                   <Link
                     to={item.to}
+                    href={`#${item.to}`}
                     smooth={true}
                     duration={500}
                     className="relative group text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer transition-colors"
+                    aria-label={`Navigate to ${item.name}`}
                   >
                     {item.name}
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all group-hover:w-full"></span>
@@ -83,9 +85,12 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(true)}
               className="inline-flex items-center justify-center p-2 rounded-md text-slate-300 hover:text-white hover:bg-white/5 focus:outline-none transition-colors"
+              aria-label="Open main menu"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
               <span className="sr-only">Open main menu</span>
-              <Menu className="block h-6 w-6" />
+              <Menu className="block h-6 w-6" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -106,6 +111,7 @@ export default function Navbar() {
             
             {/* Sliding Drawer */}
             <motion.div 
+              id="mobile-menu"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
@@ -116,9 +122,10 @@ export default function Navbar() {
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 mr-2 rounded-md text-slate-400 hover:text-white hover:bg-white/5 focus:outline-none transition-colors"
+                  aria-label="Close main menu"
                 >
                   <span className="sr-only">Close menu</span>
-                  <X className="h-6 w-6" />
+                  <X className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
 
@@ -127,10 +134,12 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     to={item.to}
+                    href={`#${item.to}`}
                     smooth={true}
                     duration={500}
                     onClick={() => setIsOpen(false)}
                     className="text-slate-300 hover:text-primary hover:bg-white/5 block px-4 py-3 rounded-xl text-lg font-medium cursor-pointer transition-all"
+                    aria-label={`Navigate to ${item.name}`}
                   >
                     {item.name}
                   </Link>
@@ -138,20 +147,31 @@ export default function Navbar() {
 
                 <div className="mt-6 pt-6 border-t border-white/10 flex justify-center gap-6">
                   <a 
-                    href="https://app.netlify.com/teams/adnanshaikh1508/projects" 
+                    href="https://www.linkedin.com/in/shaikh-saizan-274aba3a0/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-slate-800/50 border border-white/5 flex items-center justify-center text-slate-300 hover:text-[#00C7B7] hover:border-[#00C7B7]/50 hover:shadow-[0_0_15px_rgba(0,199,183,0.3)] transition-all group"
+                    className="w-12 h-12 rounded-full bg-slate-800/50 border border-white/5 flex items-center justify-center text-slate-300 hover:text-[#0A66C2] hover:border-[#0A66C2]/50 hover:shadow-[0_0_15px_rgba(10,102,194,0.3)] transition-all group"
+                    aria-label="View LinkedIn Profile"
                   >
-                    <SiNetlify className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                    <FaLinkedin className="w-6 h-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
                   </a>
                   <a 
                     href="https://github.com/saizan-shaikh" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-slate-800/50 border border-white/5 flex items-center justify-center text-slate-300 hover:text-white hover:border-white/50 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all group"
+                    aria-label="View GitHub Profile"
                   >
-                    <FaGithub className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                    <FaGithub className="w-6 h-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
+                  </a>
+                  <a 
+                    href="https://app.netlify.com/teams/adnanshaikh1508/projects" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-full bg-slate-800/50 border border-white/5 flex items-center justify-center text-slate-300 hover:text-[#00C7B7] hover:border-[#00C7B7]/50 hover:shadow-[0_0_15px_rgba(0,199,183,0.3)] transition-all group"
+                    aria-label="View Netlify Projects"
+                  >
+                    <SiNetlify className="w-6 h-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
                   </a>
                 </div>
               </div>

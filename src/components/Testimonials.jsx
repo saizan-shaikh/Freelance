@@ -53,7 +53,7 @@ export default function Testimonials() {
                     {testimonial.name.charAt(0)}
                   </div>
                   <div>
-                    <h4 className="text-white font-bold">{testimonial.name}</h4>
+                    <h3 className="text-white font-bold text-base">{testimonial.name}</h3>
                     <p className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-medium text-sm">{testimonial.role}</p>
                   </div>
                 </div>

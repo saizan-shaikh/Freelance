@@ -109,7 +109,11 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 z-10"></div>
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} - Web development freelance project by Saizan Freelancer`}
+                    loading="lazy"
+                    decoding="async"
+                    width="384"
+                    height="224"
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
 
@@ -121,8 +125,9 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary hover:text-slate-950 transition-colors"
                       title="Live Demo"
+                      aria-label={`View live website for ${project.title}`}
                     >
-                      <ExternalLink className="w-5 h-5" />
+                      <ExternalLink className="w-5 h-5" aria-hidden="true" />
                     </a>
                     {project.github && (
                       <a
@@ -131,9 +136,9 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-slate-950 transition-colors"
                         title="Source Code"
+                        aria-label={`View GitHub source code repository for ${project.title}`}
                       >
-
-                        <FaGithub className="w-5 h-5" />
+                        <FaGithub className="w-5 h-5" aria-hidden="true" />
                       </a>
                     )}
                   </div>
