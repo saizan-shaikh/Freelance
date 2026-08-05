@@ -1,31 +1,28 @@
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { Link } from 'react-scroll';
 
 const plans = [
   {
     name: "Template & Card Design",
-    price: "₹299 – ₹599",
     description: "Ideal for branding and layout designs",
     features: ["Custom Card Design", "Editable Template Design", "Social Media Graphics", "High-Quality Exports"],
     recommended: false
   },
   {
     name: "Landing Page & Portfolio",
-    price: "₹799 – ₹1499",
     description: "Great for a high-performance portfolio",
     features: ["Portfolio Website Creation", "Responsive Website Design", "Speed & Accessibility Optimized", "Basic SEO Foundations"],
     recommended: true
   },
   {
     name: "Business Website",
-    price: "₹1499 – ₹2999",
     description: "Complete package for corporate sites",
     features: ["Business Website Development", "Premium UI Design Elements", "Contact & Form Integrations", "Advanced Technical SEO Setup"],
     recommended: false
   },
   {
     name: "Custom Frontend Dev",
-    price: "Custom",
     description: "Complex tailored applications",
     features: ["Custom Frontend Development", "Web Application Solutions", "Full API & DB Integrations", "Dedicated Technical Support"],
     recommended: false
@@ -65,12 +62,9 @@ export default function Pricing() {
                 </div>
               )}
               
-              <div className="mb-8">
+              <div className="mb-6">
                 <h3 className="text-xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-slate-400 text-sm h-10">{plan.description}</p>
-                <div className="mt-4">
-                  <span className={`text-4xl font-black ${plan.recommended ? 'text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary' : 'text-white'}`}>{plan.price}</span>
-                </div>
+                <p className="text-slate-400 text-sm leading-relaxed">{plan.description}</p>
               </div>
 
               <div className="flex-grow">
@@ -87,12 +81,16 @@ export default function Pricing() {
               </div>
 
               <div className="mt-8">
-                <button 
-                  className={`w-full py-4 rounded-xl font-bold transition-all duration-300 transform active:scale-95 ${plan.recommended ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg hover:shadow-primary/50' : 'bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20'}`}
-                  aria-label={`Get started with the ${plan.name} plan`}
+                <Link
+                  to="contact"
+                  href="#contact"
+                  smooth={true}
+                  duration={500}
+                  className={`w-full py-4 rounded-xl font-bold transition-all duration-300 transform active:scale-95 text-center block cursor-pointer ${plan.recommended ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg hover:shadow-primary/50' : 'bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20'}`}
+                  aria-label={`Get in touch for ${plan.name}`}
                 >
-                  Get Started
-                </button>
+                  Get in Touch
+                </Link>
               </div>
             </motion.div>
           ))}
