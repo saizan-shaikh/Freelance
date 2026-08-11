@@ -48,10 +48,11 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             className="flex-shrink-0 relative z-50"
           >
-            <Link to="home" href="#home" smooth={true} duration={500} className="cursor-pointer" aria-label="Saizan Freelancer Home">
+            <Link to="home" href="#home" smooth={true} duration={500} className="cursor-pointer flex items-center gap-3 group" aria-label="Saizan Freelancer Home">
+              <img src="/favicon.svg" alt="Saizan Freelancer Logo" className="w-8 h-8 rounded-lg group-hover:scale-105 transition-transform duration-300 shadow-md" />
               <span className="text-2xl font-black text-white tracking-wider flex items-center">
                 SAIZAN
-                <span className="text-primary ml-1 text-3xl leading-none">.</span>
+                <span className="text-primary ml-0.5 text-3xl leading-none">.</span>
               </span>
             </Link>
           </motion.div>
